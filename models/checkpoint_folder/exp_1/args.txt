@@ -1,0 +1,19 @@
+{
+  "exp_name": "exp_1",
+  "device": "cuda",
+  "output_path": "../checkpoint_folder",
+  "base_path": "../data/VCTK_DEMAND",
+  "target_metric": "pesq",
+  "epochs": 750,
+  "batch_size": 1,
+  "num_of_sampling": 100,
+  "num_of_val_sample": 824,
+  "hist_portion": 0.1,
+  "lr": 0.0005,
+  "eval_per_epoch": 1,
+  "skip_val_epoch": 600,
+  "seed": 1,
+  "causal": false,
+  "num_workers": 1,
+  "val_speaker": []
+}
