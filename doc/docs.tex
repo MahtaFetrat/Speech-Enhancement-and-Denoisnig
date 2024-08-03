@@ -26,6 +26,7 @@
         \vspace{0.5cm}  \noindent\rule{8cm}{0.4pt}\\
         \vspace{2cm}    \textbf{\large بهار بهزادی‌پور \ \   ۴۰۲۲۰۷۱۵۵}\\
         \vspace{0.5cm}    \textbf{\large مهتا فطرت \ \   ۴۰۲۲۱۲۲۲۵}\\
+        \vspace{2cm}    \textbf{\large \href{https://github.com/MahtaFetrat/Speech-Enhancement-and-Denoisnig}{مخزن پروژه}}\\
     \end{center}
 \end{titlepage}
 
@@ -237,6 +238,49 @@ subset تست این دادگان در مخزن پروژه بارگزاری شد
 
 این ابزار نیز همانند ابزار‌های مبتنی بر شبکه‌های عصبی مورد ارزیابی قرار گرفته و در chapter بعد نتایج آن ذکر می‌شود.
 
+\section{راهکار مبتنی بر شبکه‌ی عصبی}
+فعالیت ما در این بخش به دو فاز تقسیم می‌شود.
+در فاز اولیه، ما تعداد زیادی از معماری‌های پیشین موجود را برای بررسی کیفیت و عملکر آن‌ها و اینکه آیا قابلیت بهبود دارند یا خیر آزمایش کردیم.
+در فاز بعدی نیز در جهت بهبود سه مورد از بهترین این معماری‌ها کوشیدیم.
+
+\susection{آزمون معماری‌های موجود}
+معماری‌هایی که در پروپوزال پروژه معرفی شده‌بودند از قرار زیر هستند:
+
+\begin{itemize}
+    \item \href{https://github.com/speechbrain/speechbrain/tree/develop/recipes/Voicebank/enhance/MetricGAN}{speechbrain metricGAN}
+    \item \href{https://github.com/nvidia/cleanunet}{CleanUnet}
+    \item \href{https://github.com/keonlee9420/DiffSinger}{DiffSinger}
+    \item \href{https://github.com/haoxiangsnr/FullSubNet}{FullSubNet}
+    \item \href{https://github.com/resemble-ai/resemble-enhance}{resemble-enhance}
+    \item \href{https://github.com/drethage/speech-denoising-wavenet}{speech-denoising-wavenet}
+    \item \href{https://github.com/breizhn/DTLN}{DTLN}
+\end{itemize}
+
+ما در این فاز از پروژه، سعی کردیم بسیاری از این معماری‌ها و برخی که بعد از پروپوزال به آن‌ها رسیدیم آزمایش کنیم.
+اول از این جهت که عملکرد آن‌ها روی گفتار فارسی چگونه است و دوم از این جهت که آیا می‌توان آن‌ها را به روش‌هایی چون training و fine-tuning برای زبان فارسی بهبود داد یا خیر.
+معماری‌های بررسی شده در این بخش شامل 
+MetricGAN نسخه‌ی speechbrain و MetricGAN نسخه‌ی مخزن \href{https://github.com/wooseok-shin/MetricGAN-plus-pytorch}{MetricGAN-plus-pytorch}
+و 
+دینویزر \href{https://github.com/microsoft/DNS-Challenge}{DNS-Challenge}
+و 
+معماری موفق resemble-enhance
+و 
+Clean-Unet
+ و DTLN
+ و 
+ speech-denoising-wavenet
+ و
+ \href{https://github.com/facebookresearch/denoiser}{denoiser} 
+ می‌شوند.
+ نوتبوک مربوط به آزمایش این مدل‌ها در مخزن پروژه موجود است.
+نهایتا در این بخش، سه مخزن 
+زیر علاوه بر داشتن خروجی مناسب، برای آموزش یا fine-tuning نیز مناسب تشخیص داده شدند.
+
+\begin{itemize}
+    \item https://github.com/wooseok-shin/MetricGAN-plus-pytorch
+    \item https://github.com/speechbrain/speechbrain/recipes/Voicebank/enhance/MetricGAN
+    \item https://github.com/resemble-ai/resemble-enhance
+\end{itemize}
 
 
 \end{document}
