@@ -332,4 +332,22 @@ Clean-Unet
     \label{fig:setting}
 \end{figure}
 
+\chapter{ارزیابی}
+در این بخش نتایج ارزیابی هر دو رویکرد rule-based و رویکرد شبکه‌های عصبی شامل شبکه‌های train شده و fine-tune شده را می‌آوریم.
+معیار ارزیابی مورد استفاده‌ی ما pesq با استفاده از کتابخانه‌ی pesq پایتون می‌باشد.
+یک مقدار خوب برای این معیار در بازه‌ی $-0.45$ و $4.5$ قرار می‌گیرد.
+
+برای ارزیابی، ما اصوات نویزی از دیتاست recorded را توسط مدل rule-based و مدل آموزش‌داده‌شده‌ی resemble-enhance و مدل fine-tune شده‌ی MetricGAN بهبود دادیم و 
+معیار pesq را از مقایسه‌ی اصوات تمیز و بهبود‌داده‌شده محاسبه کردیم.
+اسکریپت‌های این محاسبات نیز در محزن پروژه موجود هستند.
+نتیجه‌ی ارزیابی مدل‌ها به شرح زیر می‌باشد.
+
+\begin{itemize}
+    \item \textbf{\lr{rule-based model avg pesq:}} $1.3148984869321187$
+    \item \textbf{\lr{trained resemble-enhance model avg pesq:}} $1.3394993129703734$
+    \item \textbf{\lr{fine-tuned MetricGAN model avg pesq:}} $1.1008675870348195$
+\end{itemize}
+
+
+
 \end{document}
