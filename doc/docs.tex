@@ -382,7 +382,7 @@ Clean-Unet
 \begin{figure}[h]
 
     \centering
-    \includegraphics[width=.6\textwidth, keepaspectratio]{images/repo.jpg}
+    \includegraphics[width=\textwidth, keepaspectratio]{images/repo.jpg}
     
     \caption{\lr{project repository}}
     \label{fig:repo}
@@ -391,16 +391,70 @@ Clean-Unet
 همانطور که در تصویر مشخص است، مخزن پروژه شامل موارد زیر می‌باشد:
 
 \begin{itemize}
-    \item rule_based_enhance.ipynb: این نوتبوک شامل رویکرد rule-based برای بهبود صوت می باشد.
-    \item resemble_enhance-train-test.ipynb: این نوتبوک شامل کد آموزش و آزمون مدل resemble-enhance می‌باشد.
-    \item create_persian_dataset.ipynb: این نوتبوک شامل اسکریپت سنتز دیتاست مصنوعی می‌باشد.
-    \item Trying-different-architectures.ipynb: این نوتبوک شامل تلاش‌های انجام شده در فاز اول متودولوژی می باشد که درواقع inference و ستاپ مدل‌های پیشین است.
-    \item MetricGAN-speechbrain-train.ipynb: این نوتبوک شامل ستاپ‌های آموزش مدل MetricGAN مبتنی بر speechbrain است.
-    \item MetricGAN-finetune.ipynb: این نوتبوک شامل اسکریپت فاین‌تیون کردن MetricGAN مبتنی بر speechbrain است.
-    \item CleanUNet-inference.ipynb: این نوتبوک شامل آزمودن مدل CleanUnet می‌باشد.
-    \item models: این پوشه شامل وز‌ن‌های مدل‌های حاصل از training و fine-tuning است که خود شامل دو مدل است که جلوتر ذکر می‌شود.
-    \item datasets: این پوشه شامل دیتاست‌های تولید شده از جمله دیتاست synthesized و recorded است که در ادامه ذکر می‌شود.
-    \item doc: این پوشه شامل منابع پروژه‌ی latex برای مستندات پروژه می باشد.
-    \item app: این پوشه شامل برنامه‌ی طراحی شده برای آزمودن مدل منتخب پروژه می باشد.
+    \item :rule\_based\_enhance.ipynb این نوتبوک شامل رویکرد rule-based برای بهبود صوت می باشد.
+    \item :resemble\_enhance-train-test.ipynb این نوتبوک شامل کد آموزش و آزمون مدل resemble-enhance می‌باشد.
+    \item :create\_persian\_dataset.ipynb این نوتبوک شامل اسکریپت سنتز دیتاست مصنوعی می‌باشد.
+    \item :Trying-different-architectures.ipynb این نوتبوک شامل تلاش‌های انجام شده در فاز اول متودولوژی می باشد که درواقع inference و ستاپ مدل‌های پیشین است.
+    \item :MetricGAN-speechbrain-train.ipynb این نوتبوک شامل ستاپ‌های آموزش مدل MetricGAN مبتنی بر speechbrain است.
+    \item :MetricGAN-finetune.ipynb این نوتبوک شامل اسکریپت فاین‌تیون کردن MetricGAN مبتنی بر speechbrain است.
+    \item :CleanUNet-inference.ipynb این نوتبوک شامل آزمودن مدل CleanUnet می‌باشد.
+    \item :models این پوشه شامل وز‌ن‌های مدل‌های حاصل از training و fine-tuning است که خود شامل دو مدل است که جلوتر ذکر می‌شود.
+    \item :datasets این پوشه شامل دیتاست‌های تولید شده از جمله دیتاست synthesized و recorded است که در ادامه ذکر می‌شود.
+    \item :doc این پوشه شامل منابع پروژه‌ی latex برای مستندات پروژه می باشد.
+    \item :app این پوشه شامل برنامه‌ی طراحی شده برای آزمودن مدل منتخب پروژه می باشد.
 \end{itemize}
+
+\paragraph{models} همانطور که ذکر شد، این پوشه شامل دو مدل است که در تصویر زیر مشاهده می‌شود.
+
+\begin{figure}[h]
+
+    \centering
+    \includegraphics[width=\textwidth, keepaspectratio]{images/models.jpg}
+    
+    \caption{\lr{models}}
+    \label{fig:models}
+\end{figure}
+
+پوشه‌ی اول مربوط به آموزش مدل MetricGAN است که وزن های مدل و log های آموزش را در بر می‌گیرد.
+
+مدل دوم هم مدل حاصل از fine-tuning مدل MetricGAN است که در بخش‌های قبل توضیح داده شد.
+
+\paragraph{datasets} این پوشه مطابق تصویر زیر شامل دو فایل فشرده می‌باشد.
+فایل recorded مربوط به دیتاستی است که خودمان ضبط کرده‌ایم و شرح آن در بخش دادگان گزارش آمد.
+فایل synthesized نیز مربوط به بخش test دیتاستی است که به صورت احتمالاتی و با صدا‌های بک‌گراند و نویز گاوسی generate شده است.
+
+\begin{figure}[h]
+
+    \centering
+    \includegraphics[width=\textwidth, keepaspectratio]{images/datasets.jpg}
+    
+    \caption{\lr{datasets}}
+    \label{fig:datasets}
+\end{figure}
+
+
+\chapter{References}
+\begin{enumerate}
+    \item \lr{Fu, S.W., Yu, C., Hsieh, T.A., Plantinga, P., Ravanelli, M., Lu, X. and Tsao, Y., 2021. Metricgan+: An improved version of metricgan for speech enhancement. arXiv preprint arXiv:2104.03538.}
+    \item \lr{Kong, Z., Ping, W., Dantrey, A. and Catanzaro, B., 2022, May. Speech denoising in the waveform domain with self-attention. In ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) (pp. 7867-7871). IEEE.}
+    \item \lr{Jeong, M., Kim, H., Cheon, S.J., Choi, B.J. and Kim, N.S., 2021. Diff-tts: A denoising diffusion model for text-to-speech. arXiv preprint arXiv:2104.01409.}
+    \item \lr{Hao, X., Su, X., Horaud, R. and Li, X., 2021, June. Fullsubnet: A full-band and sub-band fusion model for real-time single-channel speech enhancement. In ICASSP 2021-2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) (pp. 6633-6637). IEEE.}
+    \item \lr{Chen, J., Wang, Z., Tuo, D., Wu, Z., Kang, S. and Meng, H., 2022, May. Fullsubnet+: Channel attention fullsubnet with complex spectrograms for speech enhancement. In ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) (pp. 7857-7861). IEEE.}
+    \item \lr{Lu, Y.J., Tsao, Y. and Watanabe, S., 2021, December. A study on speech enhancement based on diffusion probabilistic model. In 2021 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC) (pp. 659-666). IEEE.}
+    \item https://github.com/speechbrain/speechbrain/tree/develop/recipes/Voicebank/enhance/MetricGAN
+    \item https://github.com/nvidia/cleanunet
+    \item https://github.com/keonlee9420/DiffSinger
+    \item https://github.com/haoxiangsnr/FullSubNet
+    \item https://github.com/resemble-ai/resemble-enhance
+    \item https://github.com/drethage/speech-denoising-wavenet
+    \item https://github.com/breizhn/DTLN
+    \item https://www.kaggle.com/datasets/magnoliasis/persian-tts-dataset
+    \item https://www.kaggle.com/datasets/moradi/persian-texttospeech-audio
+    \item https://huggingface.co/datasets/Kamtera/ParsiGoo
+    \item https://fa.persianspeechcorpus.com/
+    \item https://github.com/persiandataset/PersianSpeech
+    \item https://www.kaggle.com/datasets/amirpourmand/automatic-speech-recognition-farsi-youtube
+    \item https://commonvoice.mozilla.org/en/datasets
+    \item https://github.com/shenasa-ai/speech2text
+\end{enumerate}
 \end{document}
